@@ -10,7 +10,7 @@ MODEL = "deepseek/deepseek-r1-0528:free"
 def call_llm(user_input):
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "HTTP-Referer": "https://yourdomain.com",
+        "HTTP-Referer": "https://prompt-injection-zuag.onrender.com",
         "Content-Type": "application/json"
     }
     payload = {
