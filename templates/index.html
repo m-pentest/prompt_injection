@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Prompt Injection CTF</title></head>
+<body>
+    <h1>Can you break the assistant?</h1>
+    <form method="POST">
+        <input name="prompt" type="text" placeholder="Enter your prompt here" style="width: 300px;" />
+        <input type="submit" value="Submit" />
+    </form>
+    <div><strong>Response:</strong> {{ response }}</div>
+</body>
+</html>
