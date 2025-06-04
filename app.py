@@ -21,6 +21,12 @@ def call_llm(user_input):
         ]
     }
     res = requests.post("https://openrouter.ai/api/v1/chat/completions", json=payload, headers=headers)
+
+    # Add debug
+    print("Response status:", res.status_code)
+    print("Response JSON:", res.text)
+
+    res.raise_for_status()  # raises error if request fails
     return res.json()["choices"][0]["message"]["content"]
 
 @app.route("/", methods=["GET", "POST"])
